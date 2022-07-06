@@ -1,0 +1,56 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="title">{{ dreamforce.hero_title }}</h1>
+      <p class="large">{{ dreamforce.hero_description }}</p>
+      <p>{{ dreamforce.hero_content }}</p>
+      <a href="{{ dreamforce.event_link }}" class="button" target="_blank">Register Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="{{ dreamforce.thumbnail }}">
+    </div>
+  </div>
+</div>
+
+<div class="info-section">
+    <div class="info-section-img">
+       <img src="{{ Image(dreamforce.meta('info_section_image')).src }}" class="side-img">
+    </div>
+    <div class="info-section-content">
+      <h2 class="title">{{ dreamforce.info_section_title }}</h2>
+      <div class="info-section-item">
+        <img src="../assets/rocket.svg" class="info-section-icon">
+        <h3>{{ dreamforce.info_section_item_1_title }}</h3>
+        <p>{{ dreamforce.info_section_item_1_content }}</p>
+      </div>
+      <div class="info-section-item">
+        <img src="../assets/person.svg" class="info-section-icon">
+        <h3>{{ dreamforce.info_section_item_2_title }}</h3>
+        <p>{{ dreamforce.info_section_item_2_content }}</p>
+      </div>
+      <div class="info-section-item">
+        <img src="../assets/collect.svg" class="info-section-icon">
+        <h3>{{ dreamforce.info_section_item_3_title }}</h3>
+        <p>{{ dreamforce.info_section_item_3_content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prefooter-cta">
+  <div class="prefooter-cta-container container">
+    <div class="prefooter-cta-content">
+      <div>
+        <h2 class="title">{{ dreamforce.prefooter_cta_title }}</h2>
+        <p>{{ dreamforce.prefooter_cta_content }}</p>
+      </div>
+    </div>
+    <div class="prefooter-cta-button">
+      <a href="{{ dreamforce.event_link }}" class="button" target="_blank">Register Now</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
